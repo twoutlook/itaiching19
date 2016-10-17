@@ -1,0 +1,22 @@
+{% extends 'itaiching/base.html' %}
+
+
+{% block content %}
+
+<h1>19 Style</h1>
+
+{% for item in item_list %}
+
+  {{ item.taichiset}}
+{{ item.num }} &nbsp;
+{{ item.title }}<br>
+<hr>
+  <!-- <td>{{ item.description }}          </td> -->
+  <!-- <td>{{ item.description }}          </td> -->
+
+
+{% endfor %}
+
+
+
+{% endblock %}
