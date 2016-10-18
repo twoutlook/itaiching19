@@ -21,7 +21,10 @@ num3=0
 
 out1=""
 out2=""
-with open('level4form19.txt') as f:
+
+
+
+with open('source19.txt') as f:
     content = f.readlines()
     
     # 一行一行讀
@@ -62,11 +65,11 @@ with open('level4form19.txt') as f:
             
             # zfill, https://docs.python.org/3/tutorial/inputoutput.html
             # temp1 = (str(num1)+"-"+str(num2).zfill(2)+"-"+str(num3).zfill(2)+" === "+num2text+" ===")
-            temp1 = (str(num1)+"-"+str(num2).zfill(2)+"-"+str(num3).zfill(2)+"〓〓〓　"+num2text+"　〓〓〓")
+            temp1 = (str(num1)+"-"+str(num2).zfill(2)+"-"+str(num3).zfill(2)+" 〓〓〓　"+num2text+"　〓〓〓")
             out1 +="\n"+ temp1 +"\n"
             # 　〓〓〓
             # temp2 = (str(num1)+"-"+str(num2).zfill(2)+"=== "+num2text+" ===")
-            temp2 = (str(num1)+"-"+str(num2).zfill(2)+"〓〓〓　"+num2text+"　〓〓〓")
+            temp2 = (str(num1)+"--"+str(num2).zfill(2)+"\n〓〓〓　"+num2text+"　〓〓〓")
             out2 +="\n"+ temp2 +"\n"
             # print(temp)
         
@@ -93,12 +96,31 @@ print (out2)
 
 
     
-with open('level4form19zh_reocrds.txt', 'w') as f1:
-    f1.write( out1 )
-    f1.close()
-print ("now, please check filename: ", f1.name)
+# with open('result19a.txt', 'w') as f1:
+#     f1.write( out1 )
+#     f1.close()
+# print ("now, please check filename: ", f1.name)
 
-with open('level4form19zh_toread.txt', 'w') as f2:
-    f2.write( out2 )
-    f2.close()
-print ("now, please check filename: ", f2.name)
+
+# with open('result19b.txt', 'w') as f2:
+#     f2.write( out2 )
+#     f2.close()
+# print ("now, please check filename: ", f2.name)
+
+
+# with open('result19b.txt', 'w') as f2:
+#     f2.write( out2 )
+#     f2.close()
+# print ("now, please check filename: ", f2.name)
+
+
+
+def write_content_to_file( content, file ):
+    with open(file, 'w') as f:
+        f.write( content )
+        f.close()
+        print ("now, please check filename: ", f.name)
+
+write_content_to_file(out1,'result19a1.txt')
+write_content_to_file(out2,'result19b1.txt')
+
