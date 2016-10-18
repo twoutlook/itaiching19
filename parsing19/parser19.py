@@ -121,6 +121,6 @@ def write_content_to_file( content, file ):
         f.close()
         print ("now, please check filename: ", f.name)
 
-write_content_to_file(out1,'result19a1.txt')
-write_content_to_file(out2,'result19b1.txt')
+write_content_to_file(out1,'result19_1.txt')
+write_content_to_file(out2,'result19_2.txt')
 
