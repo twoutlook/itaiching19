@@ -14,7 +14,7 @@ out1=""
 linenum=0
 linenum2=0
 
-num1=19
+num1=13
 num2=0
 num2text=""
 num3=0
@@ -25,7 +25,7 @@ out3=set()
 out4=set()
 
 
-with open('source19.txt') as f:
+with open('source13.txt') as f:
     content = f.readlines()
     
     # 一行一行讀
@@ -52,7 +52,7 @@ with open('source19.txt') as f:
             # 以.分割字串
             temp=perline.split(".")
            
-            # 例如 19-07-00，十九式第三式的招式名稱，
+            # 例如 13-07-00，十九式第三式的招式名稱，
             # 設定第二節數字
             num2=temp[0]
             # 第三節數字歸零
@@ -107,19 +107,19 @@ print (out2)
 
 
     
-# with open('result19a.txt', 'w') as f1:
+# with open('result13a.txt', 'w') as f1:
 #     f1.write( out1 )
 #     f1.close()
 # print ("now, please check filename: ", f1.name)
 
 
-# with open('result19b.txt', 'w') as f2:
+# with open('result13b.txt', 'w') as f2:
 #     f2.write( out2 )
 #     f2.close()
 # print ("now, please check filename: ", f2.name)
 
 
-# with open('result19b.txt', 'w') as f2:
+# with open('result13b.txt', 'w') as f2:
 #     f2.write( out2 )
 #     f2.close()
 # print ("now, please check filename: ", f2.name)
@@ -134,15 +134,15 @@ def write_content_to_file( content, file ):
 
 
 
-# write_content_to_file(out1,'result19_1.txt')
-# write_content_to_file(out2,'result19_2.txt')
+write_content_to_file(out1,'result13_1.txt')
+write_content_to_file(out2,'result13_2.txt')
 out3=list(out3)
 out3.sort()
 print(out3)
 out3x=""
 for x in out3:
     out3x+=x+"\n"
-write_content_to_file(out3x,'result19_3.txt') 
+write_content_to_file(out3x,'result13_3.txt') 
 
 out4=list(out4)
 out4.sort()
@@ -150,7 +150,7 @@ out4.sort()
 out4x=""
 for x in out4:
     out4x+=x
-# write_content_to_file(out4x,'result19_4.txt')    
+# write_content_to_file(out4x,'result13_4.txt')    
 # print(out4x)
 
 '''
@@ -166,7 +166,7 @@ for x in out4:
 # s='一上下与两中为于云人以伸似体侧倒倾内再出击刁分划刚初到前力劲势勾卷双变口右合同后向含回圈在地处外大头女如实对封小尖左带平并开弧往微心慢懒手扎打托找抬抽拉拗拢拳指按挖挤捣掌探掤推掩提插搂搭摆撑撤支收放斜方旁旋时来松根梭横正步水沉沿点然玉用由盖直相砸碓移穿立站笔线绕继续翻耳肘肩肱胀背胯胸脚腔腕腰腹腿膝膨臂自至落行衣贴起跟跨踏蹚蹬身转轴部里重野金铲闭间随震青顶领马'
 # t='一上下與兩中為於雲人以伸似體側倒傾內再出擊刁分劃剛初到前力勁勢勾卷雙變口右合同後向含迴圈在地處外大頭女如實對封小尖左帶平並開弧往微心慢懶手紥打托找抬抽拉拗攏拳指按挖擠搗掌探掤推掩提插摟搭擺撐撤支收放斜方旁旋時來鬆根梭橫正步水沉沿點然玉用由蓋直相砸碓移穿立站筆線繞繼續翻耳肘肩肱脹背胯胸腳腔腕腰腹腿膝膨臂自至落行衣貼起跟跨踏蹚蹬身轉軸部裡重野金鏟閉間隨震青頂領馬'
 
-def translate_simplified_form19_to_traditional(simplified):
+def translate_simplified_form13_to_traditional(simplified):
     s='一上下与两中为九于云人以伸似体侧倒倾内再出击刁分划刚初到前力劲势勾十卷双变口右合同后向含回圈在地处外大太头女如实对封小尖左带平并开式弧往微心慢懒手扎打托找抬抽拉拗拢拳指按挖挤捣掌探掤推掩提插搂搭摆撑撤支收放斜方旁旋时易来松极根梭横正步水沉沿点然玉用由盖直相砸碓移穿立站笔线绕继续翻耳肘肩肱胀背胯胸脚腔腕腰腹腿膝膨臂自至落行衣诀贴起跟跨踏蹚蹬身转轴部里重野金铲闭间随震青顶领马高鬃龙'
     t='一上下與兩中為九於雲人以伸似體側倒傾內再出擊刁分劃剛初到前力勁勢勾十卷雙變口右合同後向含迴圈在地處外大太頭女如實對封小尖左帶平並開式弧往微心慢懶手扎打托找抬抽拉拗攏拳指按挖擠搗掌探掤推掩提插摟搭擺撐撤支收放斜方旁旋時易來松極根梭橫正步水沉沿點然玉用由蓋直相砸碓移穿立站筆線繞繼續翻耳肘肩肱脹背胯胸腳腔腕腰腹腿膝膨臂自至落行衣訣貼起跟跨踏蹚蹬身轉軸部裡重野金鏟閉間隨震青頂領馬高鬃龍'
 
@@ -194,7 +194,7 @@ out3x=""
 for x in out3:
     out3x+= x+" "+ x.translate(trantab)+"\n"
     
-write_content_to_file(out3x,'result19_3_traditional.txt') 
+write_content_to_file(out3x,'result13_3_traditional.txt') 
 
 # https://www.uedsc.com/python3-string-translate.html
 
