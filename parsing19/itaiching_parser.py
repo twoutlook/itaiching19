@@ -124,8 +124,8 @@ def itaiching_parser( form_num,src_file):
             print ("now, please check filename: ", f.name)
     
     
-    
-    write_content_to_file(out1,src_file.split('.')[0]+"___by_record.txt")
+    # print()
+    write_content_to_file(out1,"txt_"+src_file)
     
     
 itaiching_parser( 5,'src05.txt')
