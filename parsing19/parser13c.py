@@ -55,6 +55,10 @@ with open('source13.txt') as f:
             # 例如 13-07-00，十九式第三式的招式名稱，
             # 設定第二節數字
             num2=temp[0]
+            
+            # 
+            num2=int(num2)
+            
             # 第三節數字歸零
             num3 = 0
             
@@ -94,7 +98,10 @@ with open('source13.txt') as f:
                         out4.add(y)
                 
                 # 這是招式裡的第幾動
-                num3 += 1
+                # num3 += 1
+                # fix 13-00-01 to be 13-00-00
+                if (num2 > 0):
+                    num3 += 1
                 
                 # 做格式
                 temp1 = (str(num1)+"-"+str(num2).zfill(2)+"-"+str(num3).zfill(2)+" "+perline)
